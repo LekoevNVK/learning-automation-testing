@@ -36,9 +36,9 @@ print("Passed\n")
 """---Product 1---"""
 print("Trying get catalog product 1 name and price")
 catalog_product_1_name = driver.find_element(By.XPATH, "//a[@id='item_4_title_link']")
-catalog_product_1_name_value = catalog_product_1_name.text.replace('$', '')
+catalog_product_1_name_value = catalog_product_1_name
 catalog_product_1_price = driver.find_element(By.XPATH, "(//div[@class='inventory_item_price'])[1]")
-catalog_product_1_price_value = catalog_product_1_price.text
+catalog_product_1_price_value = catalog_product_1_price.text.replace('$', '')
 print(f"Passed. Name = {catalog_product_1_name_value}; Price = {catalog_product_1_price_value}$.\n")
 
 """---Product 2---"""
